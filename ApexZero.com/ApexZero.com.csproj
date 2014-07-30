@@ -120,7 +120,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
-    <Content Include="Views\PsychOfSleep\full-width.html" />
+    <None Include="Views\PsychOfSleep\FW.cshtml" />
     <Content Include="Content\PsychOfSleep\images\black_file.gif" />
     <Content Include="Content\PsychOfSleep\images\blue_file.gif" />
     <Content Include="Content\PsychOfSleep\images\demo\1.gif" />
@@ -163,7 +163,7 @@
     <Content Include="Content\PsychOfSleep\scripts\jquery.galleryview.2.1.1.min.js" />
     <Content Include="Content\PsychOfSleep\scripts\jquery.galleryview.setup.js" />
     <Content Include="Content\PsychOfSleep\scripts\jquery.timers.1.2.js" />
-    <Content Include="Views\PsychOfSleep\style-demo.html" />
+    <None Include="Views\PsychOfSleep\StyleDemo.cshtml" />
     <Content Include="Content\PsychOfSleep\styles\featured_slide.css" />
     <Content Include="Content\PsychOfSleep\styles\forms.css" />
     <Content Include="Content\PsychOfSleep\styles\layout.css" />
@@ -180,6 +180,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Global\styles\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -193,6 +194,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\PsychOfSleep\Layout.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -26,3 +26,31 @@ C:\Users\superpanda\Documents\Visual Studio 2013\Projects\ApexZero.com\ApexZero.
 C:\Users\superpanda\Documents\Visual Studio 2013\Projects\ApexZero.com\ApexZero.com\obj\Debug\ApexZero.com.csprojResolveAssemblyReference.cache
 C:\Users\superpanda\Documents\Visual Studio 2013\Projects\ApexZero.com\ApexZero.com\obj\Debug\ApexZero.com.dll
 C:\Users\superpanda\Documents\Visual Studio 2013\Projects\ApexZero.com\ApexZero.com\obj\Debug\ApexZero.com.pdb
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\ApexZero.com.dll.config
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\ApexZero.com.dll
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\ApexZero.com.pdb
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\Microsoft.Web.Infrastructure.dll
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\Newtonsoft.Json.dll
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\System.Net.Http.Formatting.dll
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\System.Web.Helpers.dll
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\System.Web.Http.dll
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\System.Web.Http.WebHost.dll
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\System.Web.Mvc.dll
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\System.Web.Razor.dll
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\System.Web.WebPages.Deployment.dll
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\System.Web.WebPages.dll
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\System.Web.WebPages.Razor.dll
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\Newtonsoft.Json.xml
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\System.Net.Http.Formatting.xml
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\System.Web.Helpers.xml
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\System.Web.Http.xml
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\System.Web.Http.WebHost.xml
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\System.Web.Mvc.xml
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\System.Web.Razor.xml
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\System.Web.WebPages.xml
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\System.Web.WebPages.Deployment.xml
+Z:\VMShared\ApexZero.com\ApexZero.com\bin\System.Web.WebPages.Razor.xml
+Z:\VMShared\ApexZero.com\ApexZero.com\obj\Debug\ApexZero.com.csprojResolveAssemblyReference.cache
+Z:\VMShared\ApexZero.com\ApexZero.com\obj\Debug\ApexZero.com.dll
+Z:\VMShared\ApexZero.com\ApexZero.com\obj\Debug\ApexZero.com.pdb

@@ -14,5 +14,19 @@ namespace ApexZero.com.Controllers
         {
             return View();
         }
+
+        //
+        // GET: /PsychOfSleep/FW
+        public ActionResult FW()
+        {
+            return View();
+        }
+
+        //
+        // GET: /PsychOfSleep/StyleDemo
+        public ActionResult StyleDemo()
+        {
+            return View();
+        }
     }
 }
