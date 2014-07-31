@@ -10,8 +10,13 @@ namespace ApexZero.com.Controllers
     {
         //
         // GET: /Home/
-        public ActionResult Index()
+        public ActionResult Index(int? secret)
         {
+            ViewBag.Auth = 
+                (Convert.ToInt32(HttpUtility.HtmlEncode(secret)) == 1) 
+                ? true 
+                : false;
+
             ViewBag.MOTD = "This site is currently under development...";
             ViewBag.Title = "Apex Zero";
             return View();
