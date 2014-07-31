@@ -1,0 +1,31 @@
+﻿@{
+    Layout = "~/Views/PsychOfSleep/Layout.cshtml";
+}
+
+@section nav {
+    <li>@Html.ActionLink("Sleep Home","Index","PsychOfSleep")</li>
+    <li>@Html.ActionLink("Style Demo","StyleDemo","PsychOfSleep")</li>
+    <li>@Html.ActionLink("Full Width","FW","PsychOfSleep")</li>
+    <li class="last">
+        <a href="#">Other</a>
+        <ul>
+            <li class="last"><a href="#">Not implemented</a></li>
+        </ul>
+    </li>
+}
+
+@section page_title {
+    @if(!IsSectionDefined("page_title_override")) { 
+        <h1><a href="#"><strong>S</strong>eep <strong>R</strong>esource</a></h1>
+        <p>More in-depth on the effects of sleep.</p>
+    }
+    @RenderSection("page_title_override", false)
+}
+
+@section inner_body {
+    @RenderSection("inner_body", false)
+}
+
+@section bread_crumbs {
+    @RenderSection("bread_crumbs", false)
+}

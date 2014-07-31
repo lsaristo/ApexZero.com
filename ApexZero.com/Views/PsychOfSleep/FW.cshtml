@@ -1,23 +1,33 @@
 @{
-    Layout = "/Views/PsychOfSleep/Layout.cshtml";
+    Layout = ViewBag.Layout;
     Page.Title = "Full-Width | ";
 }
 
-<div class="wrapper">
-  <div id="breadcrumb">
-    <ul>
-      <li class="first">You Are Here</li>
-      <li>&#187;</li>
-      <li><a href="#">Home</a></li>
-      <li>&#187;</li>
-      <li><a href="#">Grand Parent</a></li>
-      <li>&#187;</li>
-      <li><a href="#">Parent</a></li>
-      <li>&#187;</li>
-      <li class="current"><a href="#">Child</a></li>
-    </ul>
-  </div>
-</div>
+@section bread_crumbs {
+    <div class="wrapper">
+        <div id="breadcrumb">
+            <ul>
+                <li class="first">You Are Here</li>
+                <li>&#187;</li>
+                <li><a href="#">Home</a></li>
+                <li>&#187;</li>
+                <li><a href="#">Grand Parent</a></li>
+                <li>&#187;</li>
+                <li><a href="#">Parent</a></li>
+                <li>&#187;</li>
+                <li class="current"><a href="#">Child</a></li>
+            </ul>
+        </div>
+    </div>
+}
+
+@section page_title_override {
+    <h1><a href="#"><strong>S</strong>eep <strong>R</strong>esource</a></h1>
+    <p>This is the page title on the Full Width subpage.</p>
+}
+
+@section inner_body {
+
 <!-- ####################################################################################################### -->
 <div class="wrapper">
   <div class="container">
@@ -116,3 +126,5 @@
     <br class="clear" />
   </div>
 </div>
+
+}

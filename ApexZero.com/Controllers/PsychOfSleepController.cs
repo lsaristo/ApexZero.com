@@ -8,10 +8,13 @@ namespace ApexZero.com.Controllers
 {
     public class PsychOfSleepController : Controller
     {
+        String Layout = "/Views/PsychOfSleep/SubLayout.cshtml";
+        
         //
         // GET: /PsychOfSleep/
         public ActionResult Index()
         {
+            ViewBag.Layout = "~/Views/PsychOfSleep/IndexLayout.cshtml";
             return View();
         }
 
@@ -19,6 +22,7 @@ namespace ApexZero.com.Controllers
         // GET: /PsychOfSleep/FW
         public ActionResult FW()
         {
+            ViewBag.Layout = Layout;
             return View();
         }
 
@@ -26,6 +30,7 @@ namespace ApexZero.com.Controllers
         // GET: /PsychOfSleep/StyleDemo
         public ActionResult StyleDemo()
         {
+            ViewBag.Layout = Layout;
             return View();
         }
     }

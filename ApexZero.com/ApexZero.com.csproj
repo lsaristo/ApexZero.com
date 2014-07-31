@@ -163,6 +163,7 @@
     <Content Include="Content\PsychOfSleep\scripts\jquery.galleryview.2.1.1.min.js" />
     <Content Include="Content\PsychOfSleep\scripts\jquery.galleryview.setup.js" />
     <Content Include="Content\PsychOfSleep\scripts\jquery.timers.1.2.js" />
+    <Content Include="Views\PsychOfSleep\IndexLayout.cshtml" />
     <None Include="Views\PsychOfSleep\StyleDemo.cshtml" />
     <Content Include="Content\PsychOfSleep\styles\featured_slide.css" />
     <Content Include="Content\PsychOfSleep\styles\forms.css" />
@@ -177,6 +178,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
+    <Content Include="Views\PsychOfSleep\SubLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

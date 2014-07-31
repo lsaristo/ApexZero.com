@@ -1,23 +1,35 @@
 ﻿<!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="/Content/PsychOfSleep/styles/layout.css" type="text/css" />
-    <title>@ViewBag.Title</title>
+    <title>@Page.Title @ViewBag.Title</title>
+    @RenderSection("_head", false)
 </head>
+
 <body id="top">
     <div class="wrapper col0">
         <div id="topline">
             <p>Apex Zero | it@apexzero.com</p>
             <ul>
-                <li>@Html.ActionLink("Home","Index","Home")</li>
-                <li>@Html.ActionLink("Psych133 Demo Page","Index","PsychOfSleep")</li>
+            @RenderSection("menu", true)
             </ul>
             <br class="clear" />
         </div>
     </div>
     <section id="main">
-        @RenderBody()
+        @RenderSection("body", true)
     </section>
+    <div class="wrapper">
+        @RenderSection("footer",false)
+    </div>
+    <div class="wrapper col8">
+        <div id="copyright">
+            <p class="fl_left">Copyright &copy; 2014 - All Rights Reserved - <a href="#">Apex Zero</a></p>
+            <p class="fl_right">Template by <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+            <br class="clear" />
+        </div>
+    </div>
 </body>
 </html>

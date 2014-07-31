@@ -12,6 +12,8 @@ namespace ApexZero.com.Controllers
         // GET: /Home/
         public ActionResult Index()
         {
+            ViewBag.MOTD = "This site is currently under development...";
+            ViewBag.Title = "Apex Zero";
             return View();
         }
     }
