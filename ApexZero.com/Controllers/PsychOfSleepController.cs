@@ -33,5 +33,13 @@ namespace ApexZero.com.Controllers
             ViewBag.Layout = Layout;
             return View();
         }
+
+        //
+        // GET: /PsychOfSleep/SleepGame
+        public ActionResult SleepGame()
+        {
+            ViewBag.Layout = Layout;
+            return View();
+        }
     }
 }

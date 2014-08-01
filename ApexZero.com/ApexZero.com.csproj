@@ -119,6 +119,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\PsychOfSleep\scripts\game.js" />
     <Content Include="Global.asax" />
     <None Include="Views\PsychOfSleep\FW.cshtml" />
     <Content Include="Content\PsychOfSleep\images\black_file.gif" />
@@ -164,6 +165,7 @@
     <Content Include="Content\PsychOfSleep\scripts\jquery.galleryview.setup.js" />
     <Content Include="Content\PsychOfSleep\scripts\jquery.timers.1.2.js" />
     <Content Include="Views\PsychOfSleep\IndexLayout.cshtml" />
+    <Content Include="Views\PsychOfSleep\SleepGame.cshtml" />
     <None Include="Views\PsychOfSleep\StyleDemo.cshtml" />
     <Content Include="Content\PsychOfSleep\styles\featured_slide.css" />
     <Content Include="Content\PsychOfSleep\styles\forms.css" />

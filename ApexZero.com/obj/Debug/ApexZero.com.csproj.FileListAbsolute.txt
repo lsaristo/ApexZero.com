@@ -51,6 +51,6 @@ Z:\VMShared\ApexZero.com\ApexZero.com\bin\System.Web.Razor.xml
 Z:\VMShared\ApexZero.com\ApexZero.com\bin\System.Web.WebPages.xml
 Z:\VMShared\ApexZero.com\ApexZero.com\bin\System.Web.WebPages.Deployment.xml
 Z:\VMShared\ApexZero.com\ApexZero.com\bin\System.Web.WebPages.Razor.xml
-Z:\VMShared\ApexZero.com\ApexZero.com\obj\Debug\ApexZero.com.csprojResolveAssemblyReference.cache
 Z:\VMShared\ApexZero.com\ApexZero.com\obj\Debug\ApexZero.com.dll
 Z:\VMShared\ApexZero.com\ApexZero.com\obj\Debug\ApexZero.com.pdb
+Z:\VMShared\ApexZero.com\ApexZero.com\obj\Debug\ApexZero.com.csprojResolveAssemblyReference.cache

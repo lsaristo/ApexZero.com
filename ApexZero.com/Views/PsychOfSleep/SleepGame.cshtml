@@ -1,0 +1,26 @@
+@{
+    Layout = ViewBag.Layout;
+    Page.Title = "Style Distraction Game - ";    
+}
+
+@section inner_body {
+<script type="text/javascript" src="/Content/PsychOfSleep/scripts/game.js"></script>
+
+<div class="wrapper">
+  <div class="container">
+    <div class="content">
+        <div class="err" id="noscript">
+            <p><strong>ERROR: You must enable Javascript for this game to work.</strong></p>
+        </div>
+
+        <div style="background:url('/Content/PsychOfSleep/images/bedroom.jpg');
+            margin:10px; height:576px;width:1024px" id="canvas">
+        </div>
+
+    </div>
+    </div>
+    <br class="clear" />
+</div>
+
+
+}

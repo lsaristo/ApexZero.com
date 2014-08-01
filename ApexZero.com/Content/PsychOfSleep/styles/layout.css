@@ -557,3 +557,28 @@ div.col8{border:none;}
     margin:0;
     padding:0;
     }
+
+/* Custom stuff */
+.err {
+    color: #ff3e00;
+    padding: 3px;
+    background: #eaeaea;
+    text-align: center;
+    border: 1px solid #CCCCCC;
+    margin-bottom: 20px;
+}
+
+.blank {
+    Background: none;
+}
+
+table.grxd {
+    width:100%;
+    height:100%;
+}
+
+table>td {
+    border: 2px dotted;
+    margin:0;
+    padding:0;
+}
