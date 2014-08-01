@@ -15,7 +15,12 @@
 }
                     
 @section menu {
-    <li class="last">@Html.ActionLink("Home","Index","Home")</li>
+    <li class="last">
+    <a href="#">Navigation</a>
+    <ul>
+        <li class="last">@Html.ActionLink("Home","Index","Home")</li>
+    </ul>
+    </li>
     @RenderSection("menu",false)
 }
 
@@ -53,13 +58,14 @@
 }
 
 @section footer {
+    <!--
     <div id="socialise">
         <ul>
             <li><a href="#"><img src="/Content/PsychOfSleep/images/facebook.gif" alt="" /><span>Facebook</span></a></li>
             <li><a href="#"><img src="/Content/PsychOfSleep/images/rss.gif" alt="" /><span>FeedBurner</span></a></li>
             <li class="last"><a href="#"><img src="images/twitter.gif" alt="" /><span>Twitter</span></a></li>
         </ul>
-        <!--
+
         <div id="newsletter">
             <h2>NewsLetter Sign Up !</h2>
             <p>Please enter your Email and Name to join.</p>
@@ -76,8 +82,9 @@
                 </fieldset>
             </form>
             <p>To unsubsribe please <a href="#">click here &raquo;</a>.</p>
-        </div> -->
+        </div>
         <br class="clear" />
     </div>
+    -->
     }
 @RenderBody()
