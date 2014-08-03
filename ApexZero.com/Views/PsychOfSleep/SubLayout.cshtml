@@ -5,13 +5,16 @@
 @section nav {
     <li>@Html.ActionLink("Sleep Home","Index","PsychOfSleep")</li>
     <li>@Html.ActionLink("Sleep Distraction Game","SleepGame","PsychOfSleep")</li>
-    <li>@Html.ActionLink("Full List of References","StyleDemo","PsychOfSleep")</li>
+    <li>@Html.ActionLink(
+        "All articles","StyleDemo", "PsychOfSleep", new { articleId = "-1" }, 
+        null 
+    )</li>
 }
 
 @section page_title {
     @if(!IsSectionDefined("page_title_override")) { 
         <h1><a href="#"><strong>S</strong>eep <strong>R</strong>esource</a></h1>
-        <p>More in-depth on the effects of sleep.</p>
+        <p>Useful sleep information for your everyday life.</p>
     }
     @RenderSection("page_title_override", false)
 }

@@ -113,6 +113,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\PsychOfSleepModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -121,7 +122,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Content\PsychOfSleep\scripts\game.js" />
     <Content Include="Global.asax" />
-    <None Include="Views\PsychOfSleep\FW.cshtml" />
     <Content Include="Content\PsychOfSleep\images\black_file.gif" />
     <Content Include="Content\PsychOfSleep\images\blue_file.gif" />
     <Content Include="Content\PsychOfSleep\images\demo\1.gif" />
@@ -185,7 +185,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\Global\styles\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

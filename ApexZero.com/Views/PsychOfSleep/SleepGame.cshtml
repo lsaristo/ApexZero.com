@@ -13,8 +13,12 @@
             <p><strong>ERROR: You must enable Javascript for this game to work.</strong></p>
         </div>
 
-        <div style="background:url('/Content/PsychOfSleep/images/bedroom.jpg');
+        <div class="canvas" style="background:url('/Content/PsychOfSleep/images/bedroom.jpg');
             margin:10px; height:576px;width:1024px" id="canvas">
+        </div>
+
+        <div class="notify" id="notificationArea">
+
         </div>
 
     </div>
@@ -22,5 +26,6 @@
     <br class="clear" />
 </div>
 
+<body onload="init_game('@ViewBag.messages')"></body>
 
 }
