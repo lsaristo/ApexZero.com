@@ -22,7 +22,7 @@ body {
     font-family:Georgia, "Times New Roman", Times, serif;
     color:#666666;
     background: url(/Content/PsychOfSleep/images/back_pattern2.png) repeat;
-    width:84.6%;
+    width:1054px;
     position: relative;
     margin: auto;
     min-height: 100%;
@@ -66,7 +66,7 @@ div.f h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, div.wr
     position:relative;
     margin: 0 auto 0;
     display:block;
-    width:90%;
+    width:97%;
 }
 
 #topline {
@@ -134,12 +134,13 @@ div.f h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, div.wr
     float:left;
     margin-top:7px;
     overflow:hidden;
+    width:45%;
 }
 
 #header .fl_right{
     display:block;
     float:right;
-    width:468px;
+    width:45%;
     height:60px;
     margin-top:21px;
     overflow:hidden;
@@ -172,13 +173,13 @@ div.f h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, div.wr
 }
 
 .container{
-    padding:20px 0;
+    padding:10px 0;
 }
 
 .content {
     display:block;
     float:left;
-    width:630px;
+    width:65%;
     position: relative;
     margin: auto;
 }
@@ -199,12 +200,12 @@ div.f h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, div.wr
 .column {
     display:block;
     float:right;
-    width:300px;
+    width:35%;
 }
 
 .column .holder, .column #featured {
     display:block;
-    width:300px;
+    width:100%;
     margin-bottom:20px;
 }
 
@@ -213,22 +214,22 @@ div.f h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, div.wr
     width:100%;
     height:65px;
     margin:0;
-    padding:15px 0 0 0;
+    padding: 0 0 0 0;
     font-size:20px;
     line-height:normal;
     border-bottom:1px dotted #999999
 }
 
 .column .holder h2.title img {
-    float:left;
-    margin:-15px 8px 0 0;
-    padding:5px;
+    float:right;
+    margin: 0 8px 0 0;
+    padding:0;
     border:1px solid #999999;
 }
 
 .column div.imgholder {
     display:block;
-    width:290px;
+    width:100%;
     margin:0 0 10px 0;
     padding:4px;
     border:1px solid #CCCCCC;
@@ -259,7 +260,7 @@ div.f h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, div.wr
 
 .column #featured li {
     display:block;
-    width:250px;
+    width:30%;
     margin:0;
     padding:20px 25px;
     color:#666666;
@@ -268,7 +269,7 @@ div.f h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, div.wr
 
 .column #featured li p.imgholder {
     display:block;
-    width:240px;
+    width:30%;
     height:90px;
     margin:20px 0 15px 0;
     padding:4px;
@@ -337,7 +338,7 @@ div.f h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, div.wr
 
 #hpage_cats .fl_left, #hpage_cats .fl_right{
     display:block;
-    width:468px;
+    width:47%;
     margin-bottom:15px;
 }
 
@@ -375,7 +376,7 @@ div.f h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, div.wr
 
 #hpage_latest {
     display:block;
-    width:120%;
+    width:100%;
 }
 
 
@@ -394,9 +395,9 @@ div.f h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, div.wr
 
 #hpage_latest li {
     display:block;
-    width: 310px;
+    width: 30%;
     margin:0 15px 0 0;
-    padding:20px;
+    padding: 5px;
     float:left;
 }
 
@@ -540,13 +541,12 @@ table.grxd {
     color:transparent;
 }
 
-div.transbox {
+.transbox {
     background-color: rgba(255,255,255,0.2);
     border: 1px solid #CCCCCC;
     opacity: 1;
-    width: 100%;
-    margin: auto -12px;
-    padding: 10px;
+    width: 90%;
+    margin: auto;
 }
 
 table>td {
@@ -555,6 +555,8 @@ table>td {
 }
 
 .canvas {
+    position: relative;
+    margin: auto 0;
     display: none;
     cursor: pointer;
     user-select: none;
@@ -578,7 +580,6 @@ table>td {
     text-align: left;
     margin-bottom: 20px;
     margin-top: 20px;
-    margin-left: 10px;
     padding: 15px;
     color: black;
     display:none;
