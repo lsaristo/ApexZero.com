@@ -7,9 +7,9 @@
 //
 // Cells in the picture grid that coorspond to points of interest on the image. 
 var hit_cells = [
-    [367, 368, 338, 398],                                        // POPCORN.1
+    [368, 398],                                        // POPCORN.1
     [524, 525, 553, 554, 555],                              // TABLET.2
-    [437, 438, 439, 467, 468, 469, 527, 528, 529, 499, 498, 497],          // HEATER.3
+    [468, 437, 438, 439, 467, 469, 527, 528, 529, 499, 498, 497],          // HEATER.3
     [451, 452, 423, 482, 483, 484, 513, 514, 515, 544, 453, 454],     // LAPTOP.4
     [416, 354, 355, 356, 384, 385, 386, 414, 415, 444, 445, 446, 474, 475, 476,  // TV.5
         504, 505, 506, 535, 536, 530],
@@ -21,6 +21,7 @@ var hit_cells = [
 // Values sourced at runtime from database;
 var message_list = [];
 var url_messages = [];
+var hit_coord = [[275, 340], [500, 460], [640, 410], [130, 410], [850, 350], [795, 270], [390, 180]];
 
 /**
  * Test that the module is working.
@@ -64,9 +65,9 @@ function draw_circle(grouping)
     img.src= "/Content/PsychOfSleep/images/circle.png";
     img.className = "pic1";
     
-    var coords = get_coords(hit_cells[grouping][0]);
-    img.style.left = (coords[0] * 28).toString() + "px";
-    img.style.top = (coords[1] * 18).toString() + "px";
+    var coords = hit_coord[grouping];
+    img.style.left = coords[0] + "px";
+    img.style.top = coords[1] + "px";
     document.getElementById("canvas").appendChild(img);
 }
 
@@ -75,7 +76,7 @@ function draw_circle(grouping)
  */
 function get_coords(cell)
 {
-    var row_num = Math.floor(cell / 22);    // 22 Rows total
+    var row_num = Math.floor(cell / 30);    // 22 Rows total
     var col_num = cell % 30;    // 30 Columns total
 
     return [col_num, row_num];

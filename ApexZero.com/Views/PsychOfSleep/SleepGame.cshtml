@@ -8,12 +8,11 @@
 @section inner_body {
 <div class="wrapper">
   <div class="container">
-    <div class="content">
         <div class="err" id="noscript">
             <p><strong>ERROR: You must enable Javascript for this game to work.</strong></p>
         </div>
         <div class="canvas" style="background:url('/Content/PsychOfSleep/images/bedroom.jpg') no-repeat;
-            margin: 10px; margin-left:-30px; height:576px;width:1024px" id="canvas">
+            margin: 0px; margin-left:15px; height:576px;width:1024px" id="canvas">
         </div>
         <div id="notify">
             <div id="notify_title" class="notify_title">
@@ -23,8 +22,6 @@
         </div>
     </div>
     </div>
-</div>
-<br class="clear" />
 }
 
 @section _body_tags {onload="init_game('@ViewBag.messages')"}
