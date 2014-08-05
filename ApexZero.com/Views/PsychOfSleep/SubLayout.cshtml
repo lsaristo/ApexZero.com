@@ -13,16 +13,13 @@
 
 @section page_title {
     @if(!IsSectionDefined("page_title_override")) { 
-        <h1><a href="#"><strong>S</strong>eep <strong>R</strong>esource</a></h1>
+        <h1><a href="@Url.Action("Index", "PsychOfSleep", "PsychOfSleep")"><strong>P</strong>sych of <strong>S</strong>leep</a></h1>
         <p>Useful sleep information for your everyday life.</p>
     }
     @RenderSection("page_title_override", false)
 }
 
-@section inner_body {
-    @RenderSection("inner_body", false)
-}
-
-@section bread_crumbs {
-    @RenderSection("bread_crumbs", false)
-}
+@section inner_body {@RenderSection("inner_body", false)}
+@section bread_crumbs {@RenderSection("bread_crumbs", false)}
+@section _head {@RenderSection("_head", false)}
+@section _body_tags {@RenderSection("_body_tags", false)}

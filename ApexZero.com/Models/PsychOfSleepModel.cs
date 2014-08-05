@@ -9,15 +9,29 @@ namespace ApexZero.com.Models
 {
     public class PsychOfSleepModel
     {
+        public struct Article
+        {
+            public String title;
+            public String body;
+            public int id;
+        }
+
+        public struct GameMessage
+        {
+            public String message;
+            public String url;
+            public int id;
+        }
+
         String connString = 
             ConfigurationManager
             .ConnectionStrings["PrimaryDB"]
             .ConnectionString;
 
-        public String[] getGameMessages()
+        public List<GameMessage> getGameMessages()
         {
-            String query = "select id,message from [PsychOfSleep].dbo.tblGame";
-            String[] resultString = new String[15];
+            String query = "select id,message,url from [PsychOfSleep].dbo.tblGame";
+            List<GameMessage> messages = new List<GameMessage>();
 
             using(SqlConnection conn = new SqlConnection(connString)) {
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -26,36 +40,80 @@ namespace ApexZero.com.Models
 
                 try {
                     while(dr.Read()) {
-                        resultString[Convert.ToInt32(dr["id"])-1] = (String)dr["message"];
+                        messages.Add(
+                            new GameMessage() { 
+                                id = Convert.ToInt32(dr["id"]), 
+                                message = (String)dr["message"], 
+                                url = (String)dr["url"]
+                            }
+                        );
                     }
                 } finally {
                     conn.Close();
                 }
             }
-            return resultString;
+            return messages;
+        }
+
+        public List<Article> getAllArticles()
+        {
+            List<Article> outArts = new List<Article>();
+            String query = 
+                "select id,title from [PsychOfSleep].dbo.tblArticles";
+            
+            using(SqlConnection conn = new SqlConnection(connString)) {
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                
+                if(!dr.HasRows) {
+                    throw new Exception();
+                }
+
+                try {
+                    while(dr.Read()) {
+                        outArts.Add(
+                            new Article() {
+                                id = Convert.ToInt32(dr["id"]),
+                                title = (String)dr["title"]
+                            }
+                        );
+                    }
+                } finally {
+                    conn.Close();
+                }
+            }
+            return outArts;
         }
     
-        public String getArticle(int id)
+        public Article getArticle(int id)
         {
+            Article outArticle = new Article();
+            outArticle.title = "";
+            outArticle.body = "";
             String query = 
-                "select contents from [PsychOfSleep].dbo.tblArticles where id = @id";
-            String resultString = "";
+                "select title,contents from [PsychOfSleep].dbo.tblArticles where id = @id";
             
             using(SqlConnection conn = new SqlConnection(connString)) {
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@id", id);
                 conn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
+                
+                if(!dr.HasRows) {
+                    throw new Exception();
+                }
 
                 try {
                     while(dr.Read()) {
-                        resultString += dr["contents"];
+                        outArticle.title += dr["title"];
+                        outArticle.body += dr["contents"];
                     }
                 } finally {
                     conn.Close();
                 }
             }
-            return resultString;
+            return outArticle;
         }
     }
 }

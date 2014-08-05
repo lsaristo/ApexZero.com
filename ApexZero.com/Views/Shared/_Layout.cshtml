@@ -8,7 +8,7 @@
     @RenderSection("_head", false)
 </head>
 
-<body id="top">
+<body id="top" @RenderSection("_body_tags", false)>
     <div class="wrapper col0">
         <div id="topline">
                 <p>Apex Zero | it@apexzero.com</p>
@@ -22,7 +22,6 @@
         @RenderSection("body", true)
     </section>
     <div class="wrapper">
-        @RenderSection("footer",false)
     </div>
     <div class="wrapper col8">
         <div id="copyright">

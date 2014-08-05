@@ -22,14 +22,38 @@ namespace ApexZero.com.Controllers
         // GET: /PsychOfSleep/StyleDemo
         public ActionResult StyleDemo(int? articleId)
         {
+            ViewBag.Layout = Layout;
             Models.PsychOfSleepModel m = new Models.PsychOfSleepModel();
 
-            if(articleId == -1 || articleId == null) {
-                ViewBag.RequestedContent += "<h1>List of articles requested</h1>";
-            } else {
-                ViewBag.RequestedContent += m.getArticle((int)articleId);
+            if(articleId == -1) {
+                List<Models.PsychOfSleepModel.Article> arts = 
+                    m.getAllArticles();
+
+                ViewBag.articleTitle = "All articles:";
+                ViewBag.articleBody = "<table class=\"xxd\">";
+                ViewBag.articleBody += "<tr><td>ID</td><td>Title</tr>";
+
+                foreach(Models.PsychOfSleepModel.Article e in arts) {
+                    ViewBag.articleBody += 
+                        "<tr><td>" + e.id 
+                        + "</td><td><a href=\"/PsychOfSleep/StyleDemo?articleId="
+                        +e.id+"\">" + e.title + "</a></td></tr>";
+                }
+                ViewBag.articleBody += "</table>";
+                return View();
             }
-            ViewBag.Layout = Layout;
+
+
+            try { 
+                Models.PsychOfSleepModel.Article result 
+                    = m.getArticle((int)articleId);
+                ViewBag.articleTitle = result.title;
+                ViewBag.articleBody = result.body;
+            } catch(Exception) {
+                ViewBag.articleTitle =
+                    "<div class='err' id='noscript'>ERROR: Invalid Article ID";
+                ViewBag.articleBody = "<a href='/PsychOfSleep'>Back Home</a></div>";
+            }
             return View();
         }
 
@@ -38,15 +62,17 @@ namespace ApexZero.com.Controllers
         public ActionResult SleepGame()
         {
             String messages = "";
-            String[] db_messages = 
+            List<Models.PsychOfSleepModel.GameMessage> db_messages = 
                 (new Models.PsychOfSleepModel()).getGameMessages();
 
-            foreach(String msg in db_messages) {
-                if(msg != null) {
-                    messages += msg + "~";
+            foreach(Models.PsychOfSleepModel.GameMessage msg in db_messages) {
+                if(msg.id != null) {
+                    messages 
+                        += msg.id + "^"
+                        + msg.message + "^"
+                        + msg.url + "~";
                 }
             }
-
             ViewBag.messages = messages;
             ViewBag.Layout = Layout;
             return View();
