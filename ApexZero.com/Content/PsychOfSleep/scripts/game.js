@@ -22,6 +22,7 @@ var hit_cells = [
 var message_list = [];
 var url_messages = [];
 var hit_coord = [[275, 340], [500, 460], [640, 410], [130, 410], [850, 350], [795, 270], [390, 180]];
+var hit_so_far = [];
 
 /**
  * Test that the module is working.
@@ -41,6 +42,22 @@ function remove_warning()
     elem.className = "blank";
 }
 
+function is_over(id)
+{
+    var i = 0;
+
+    for ( ; i < hit_so_far.length; i++) {
+        if (id == hit_so_far[i]) { break; }
+    }
+
+    if (i == hit_so_far.length) {
+        hit_so_far.push(id);
+    }
+
+    if (hit_so_far.length == 7) { return true; }
+    return false;
+}
+
 /**
  * Show a notification in gree.
  */
@@ -52,8 +69,18 @@ function show_notify(id)
 
     title.innerHTML = "Correct";
     msg.innerHTML = message_list[id];
-    msg.innerHTML += ". Read more: " + url_messages[id];
+    msg.innerHTML += ". <a href=\"" + url_messages[id] + "\">Read More >>></a>";
     n.style.display = "block";
+
+    if (is_over(id)) {
+        msg.innerHTML += "<br><br><br><strong>YOU WIN!!";
+
+        var rel = document.createElement("button");
+        rel.onclick = function () { window.location.reload(true); };
+        var text = document.createTextNode("Play again");
+        rel.appendChild(text);
+        n.appendChild(rel);
+    }
 }
 
 /**
@@ -64,7 +91,6 @@ function draw_circle(grouping)
     var img = document.createElement("img");
     img.src= "/Content/PsychOfSleep/images/circle.png";
     img.className = "pic1";
-    
     var coords = hit_coord[grouping];
     img.style.left = coords[0] + "px";
     img.style.top = coords[1] + "px";
@@ -78,7 +104,6 @@ function get_coords(cell)
 {
     var row_num = Math.floor(cell / 30);    // 22 Rows total
     var col_num = cell % 30;    // 30 Columns total
-
     return [col_num, row_num];
 }
 

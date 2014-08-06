@@ -49,6 +49,7 @@ namespace ApexZero.com.Controllers
                     = m.getArticle((int)articleId);
                 ViewBag.articleTitle = result.title;
                 ViewBag.articleBody = result.body;
+                ViewBag.articleURL = result.url;
             } catch(Exception) {
                 ViewBag.articleTitle =
                     "<div class='err' id='noscript'>ERROR: Invalid Article ID";

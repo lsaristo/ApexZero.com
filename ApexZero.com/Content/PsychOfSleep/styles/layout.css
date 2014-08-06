@@ -545,8 +545,15 @@ table.grxd {
     background-color: rgba(255,255,255,0.2);
     border: 1px solid #CCCCCC;
     opacity: 1;
+    padding: 20px;
     width: 90%;
     margin: auto;
+}
+
+.transbox a {
+    font-weight: bold;
+    margin: auto 30px;
+    font-size: 16px;
 }
 
 table>td {

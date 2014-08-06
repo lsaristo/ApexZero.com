@@ -14,6 +14,7 @@ namespace ApexZero.com.Models
             public String title;
             public String body;
             public int id;
+            public String url;
         }
 
         public struct GameMessage
@@ -43,7 +44,7 @@ namespace ApexZero.com.Models
                         messages.Add(
                             new GameMessage() { 
                                 id = Convert.ToInt32(dr["id"]), 
-                                message = (String)dr["message"], 
+                                message = (String)dr["message"],
                                 url = (String)dr["url"]
                             }
                         );
@@ -59,7 +60,7 @@ namespace ApexZero.com.Models
         {
             List<Article> outArts = new List<Article>();
             String query = 
-                "select id,title from [PsychOfSleep].dbo.tblArticles";
+                "select url,id,title from [PsychOfSleep].dbo.tblArticles";
             
             using(SqlConnection conn = new SqlConnection(connString)) {
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -75,7 +76,8 @@ namespace ApexZero.com.Models
                         outArts.Add(
                             new Article() {
                                 id = Convert.ToInt32(dr["id"]),
-                                title = (String)dr["title"]
+                                title = (String)dr["title"],
+                                url = (String)dr["URL"]
                             }
                         );
                     }
@@ -92,7 +94,7 @@ namespace ApexZero.com.Models
             outArticle.title = "";
             outArticle.body = "";
             String query = 
-                "select title,contents from [PsychOfSleep].dbo.tblArticles where id = @id";
+                "select URL,title,contents from [PsychOfSleep].dbo.tblArticles where id = @id";
             
             using(SqlConnection conn = new SqlConnection(connString)) {
                 SqlCommand cmd = new SqlCommand(query, conn);
@@ -108,6 +110,7 @@ namespace ApexZero.com.Models
                     while(dr.Read()) {
                         outArticle.title += dr["title"];
                         outArticle.body += dr["contents"];
+                        outArticle.url += dr["URL"];
                     }
                 } finally {
                     conn.Close();
