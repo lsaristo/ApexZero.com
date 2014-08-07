@@ -21,7 +21,8 @@ body {
     font-size:13px;
     font-family:Georgia, "Times New Roman", Times, serif;
     color:#666666;
-    background: url(/Content/PsychOfSleep/images/back_pattern2.png) repeat;
+    background-color: white;
+    /* background: url(/Content/PsychOfSleep/images/back_pattern2.png) repeat; */
     width:1054px;
     position: relative;
     margin: auto;

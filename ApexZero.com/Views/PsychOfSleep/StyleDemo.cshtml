@@ -1,19 +1,18 @@
 @{
-    Layout = ViewBag.Layout;
-    Page.Title = "Style Demo - ";    
+  Layout = ViewBag.Layout;
+  Page.Title = "Style Demo - ";  
 }
 
 @section inner_body {
-
 <div class="wrapper">
   <div class="container">
-        <div class="transbox">
-            <h1>@Html.Raw(ViewBag.articleTitle)</h1>
-            <p>@Html.Raw(ViewBag.articleBody)</p>
-            <br />
-            <p><a href="@Html.Raw(ViewBag.articleURL)">Read more</a></p>
-        </div>
+    <div class="transbox">
+      <h1>@Html.Raw(ViewBag.articleTitle)</h1>
+      <p>@Html.Raw(ViewBag.articleBody)</p>
+      <br />
+      <p><a href="@Html.Raw(ViewBag.articleURL)">Read more</a></p>
     </div>
-    <br class="clear" />
+  </div>
+  <br class="clear" />
 </div>
 }
