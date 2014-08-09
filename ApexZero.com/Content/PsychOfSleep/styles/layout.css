@@ -546,7 +546,7 @@ table.grxd {
     border: 1px solid #CCCCCC;
     opacity: 1;
     padding: 20px;
-    width: 90%;
+    width: 70%;
     margin: auto;
 }
 
@@ -606,3 +606,4 @@ table>td {
 .pic1 {
     position: absolute;
 }
+
