@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/Content/PsychOfSleep/styles/layout.css" type="text/css" />
+    <title>@Page.Title @ViewBag.Title</title>
+    @RenderSection("_head", false)
+</head>
+
+<body id="top" @RenderSection("_body_tags", false)>
+    <div class="wrapper col0">
+        <div id="topline">
+		<p><a href="mailto:it@apexzero.com?Subject=Website">Apex Zero</a></p>
+                <ul>
+                    @RenderSection("menu",true)
+                </ul>
+            <br class="clear" />
+        </div>
+    </div>
+    <section id="main">
+        @RenderSection("body", true)
+    </section>
+    <div class="wrapper">
+    </div>
+    <div class="wrapper col8">
+        <div id="copyright">
+            <p class="fl_left">Copyright &copy; 2014 - All Rights Reserved - <a href="mailto:it@apexzero.com?Subject=Website">Apex Zero</a></p>
+	    <p class="fl_right">Template from <a href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a> modified by <a href="mailto:jwilkey@apexzero.com?Subject=Website">John Wilkey</a></p>
+            <br class="clear" />
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+@{
+    Layout = ViewBag.Layout;
+    Page.Title = "Style Distraction Game - ";    
+}
+
+@section _head {<script type="text/javascript" src="/Content/PsychOfSleep/scripts/game.js"></script>}
+
+@section inner_body {
+<div class="wrapper">
+  <div class="container">
+    <div class="err" id="noscript">
+      <p><strong>
+        ERROR: You must enable Javascript for this game to work.
+      </strong></p>
+    </div>
+    <div class="canvas" style="background:url('/Content/PsychOfSleep/images/bedroom.jpg') no-repeat; height:576px;width:1024px" id="canvas"></div>
+    <div id="notify">
+      <div id="notify_title" class="notify_title"> </div>
+      <div id="notify_message" class="notify_message"></div>
+    </div>
+  </div>
+</div>
+}
+@section _body_tags {onload="init_game('@ViewBag.messages')"}

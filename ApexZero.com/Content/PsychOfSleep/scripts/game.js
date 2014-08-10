@@ -15,13 +15,14 @@ var hit_cells = [
         504, 505, 506, 535, 536, 530],
     [294, 293, 323, 324],                                   // LAMP .6
     [161, 162, 163, 191, 192, 193, 221, 222, 223, 251, 252, 253, 281, 282, 283] // MOON.7
+    [000] // BEER.8
 ];
 
 //
 // Values sourced at runtime from database;
 var message_list = [];
 var url_messages = [];
-var hit_coord = [[275, 340], [500, 460], [640, 410], [130, 410], [850, 350], [795, 270], [390, 180]];
+var hit_coord = [[275, 340], [500, 460], [640, 410], [130, 410], [850, 350], [795, 270], [390, 180], [000] ];
 var hit_so_far = [];
 
 /**
@@ -38,8 +39,72 @@ function test(e)
 function remove_warning()
 {
     var elem = document.getElementById("noscript");
+    var message = 
+        "In our day to day lives, there are so many distractors around us that"
+        + " we're not even aware of that can be affecting the quality of our sleep"
+        + ". The brain relies on a careful balance of external cues--called "
+        + "zeitgebers--to regulate the body's natural daily cycle, the Circadian "
+        + "ryhthym. These cues exist naturally in the environment, with the most"
+        + " noticeable of them being the light from the sun.<br><br>"
+        + "Today we have so many gadets and devices that can potentially "
+        + "generate confusing input that mimic natural zeitgebers at times when"
+        + " the brain wouldn't expect them to be prevalent"
+        + ". The result of this is that the body's natural clock can be"
+        + " thrown off from the natural daily cycle. This can create a host"
+        + " of problems, ranging from simple insomnia to more serious "
+        + "conditions involving chronic sleep deprivation or delay/advanced"
+        + " sleep phase syndrome in which the sleep/wake cycle has been "
+        + "shifted.<br><br>In light of the importance of maintaining a "
+        + "sleeping environment free of these artificial zeitgebers, the Sleep"
+        + " distraction game has been developed to help you identify common"
+        + " sources of these distractors that are typically found in a bedroom."
+        + " You should attempt to identify all the distractors in the room "
+        + "featured below by clicking on the offending item. You will be "
+        + "notified of your correctness. You will also find interesting "
+	+ "reading on the details for each item you identify.<br><br>"
+	+ "This game was written exclusively for use as demonstration"
+	+ " for UC Berkeley's Psychology of Sleep. Please email any inaccuracies "
+	+ "or bugs to <a id='aa' href=mailto:dev@apexzero.com?Subject=Game>ApexZero</a>";
+    var msg = document.createElement("p");
+    var title = document.createElement("p");
+    var link = document.createElement("a");
+    var link_text = document.createTextNode("Hide This Message");
+    link.appendChild(link_text);
+    link.title = "Title";
+    link.className = "err";
+    link.id = "err_link";
+    link.href="javascript:hide_msg()";
+
+    title.className = "title";
+    msg.className = "e";
+    msg.id = "err_msg";
+
+    title.innerHTML = "Welcome to the Sleep Distraction Game!";
+    msg.innerHTML = message;
     elem.innerHTML = "";
-    elem.className = "blank";
+
+    elem.appendChild(title);
+    elem.appendChild(msg);
+    elem.appendChild(link);
+}
+
+function hide_msg() {
+    var elem = document.getElementById("err_msg");
+    var link = document.getElementById("err_link");
+    document.getElementById("aa").style.display = "none";
+    link.firstChild.data = "Show Message";
+    link.href = "javascript:show_msg()";
+    elem.className = "hide_me";
+}
+
+function show_msg() {
+    var elem = document.getElementById("err_msg");
+    var link = document.getElementById("err_link");
+    link.firstChild.data = "Hide Message";
+    link.href = "javascript:hide_msg()";
+    elem.className = "e";
+
+    document.getElementById("aa").style.display = "inline";
 }
 
 function is_over(id)
@@ -54,7 +119,7 @@ function is_over(id)
         hit_so_far.push(id);
     }
 
-    if (hit_so_far.length == 7) { return true; }
+    if (hit_so_far.length == 8) { return true; }
     return false;
 }
 
@@ -67,7 +132,7 @@ function show_notify(id)
     var title = document.getElementById("notify_title");
     var msg = document.getElementById("notify_message");
 
-    title.innerHTML = "Correct";
+    title.innerHTML = "Correct!!";
     msg.innerHTML = message_list[id];
     msg.innerHTML += ". <a href=\"" + url_messages[id] + "\">Read More >>></a>";
     n.style.display = "block";

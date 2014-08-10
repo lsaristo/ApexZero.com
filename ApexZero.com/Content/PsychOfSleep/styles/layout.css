@@ -518,15 +518,42 @@ div.col8{border:none;}
 .err {
     color: #000000;
     padding: 3px;
-    background: #CCCCCC;
+    background: #F8F8F8;
     text-align: center;
-    border: 1px solid #666666;
+    border: 1px solid #CCCCCC;
     margin-bottom: 30px;
     border-radius: 10px;
 }
 
-.blank {
-    Background: none;
+.err p.title {
+    font-size: 16px;
+    text-align:center;
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 80%;
+    margin: auto;
+    }
+
+.err p.e {
+    font-size: 14px;
+    text-align: left;
+    margin: auto;
+    padding: 10px;
+    width:95%;
+}
+
+.err a {
+    text-align:center;
+    font-size: 13px;
+    border:none;
+    color: #059BD8;
+}
+
+.err p.hide_me {
+    color: transparent;
+    font-size: 0px;
+    padding:3px;
 }
 
 table.xxd {
@@ -582,8 +609,8 @@ table>td {
     min-height: 20px;
     min-width:1000px;
     max-width: 1000px;
-    background: #CCCCCC;
-    border: 1px solid #006508;
+    background: #F8F8F8;
+    border: 1px solid #CCCCCC;
     text-align: left;
     margin-bottom: 20px;
     margin-top: 20px;
@@ -594,7 +621,10 @@ table>td {
 
 .notify_title {
     font-weight:bold;
+    font-size: 15px;
     text-align: center;
+    border-bottom: 1px solid #CCCCCC;
+    padding-bottom: 10px;
 }
 
 .notify_message {
