@@ -31,12 +31,11 @@ namespace ApexZero.com.Controllers
 
                 ViewBag.articleTitle = "All articles:";
                 ViewBag.articleBody = "<table class=\"xxd\">";
-                ViewBag.articleBody += "<tr><td>ID</td><td>Title</tr>";
+                ViewBag.articleBody += "<tr><td>Title</td></tr>";
 
                 foreach(Models.PsychOfSleepModel.Article e in arts) {
                     ViewBag.articleBody += 
-                        "<tr><td>" + e.id 
-                        + "</td><td><a href=\"/PsychOfSleep/StyleDemo?articleId="
+                        "<td><a href=\"/PsychOfSleep/StyleDemo?articleId="
                         +e.id+"\">" + e.title + "</a></td></tr>";
                 }
                 ViewBag.articleBody += "</table>";
